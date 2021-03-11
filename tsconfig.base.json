@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@demo/ui/text-editor": ["libs/ui/text-editor/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

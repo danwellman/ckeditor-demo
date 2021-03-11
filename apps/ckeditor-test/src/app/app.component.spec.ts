@@ -1,10 +1,13 @@
 import { TestBed } from '@angular/core/testing';
+
+import { TextEditorModule } from '@demo/ui/text-editor';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AppComponent],
+      imports: [TextEditorModule],
     }).compileComponents();
   });
 

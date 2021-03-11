@@ -1,0 +1,20 @@
+<div
+  class="rich-text-editor"
+  [formGroup]="parentForm"
+  [ngClass]="{ disabled: disabled, empty: empty }"
+  [ngClass]="lang"
+  [ngClass]="customClass"
+  *ngIf="showEditor"
+>
+  <label>{{ label }}</label>
+  <ckeditor
+    #ck
+    id="ckEditor"
+    [editor]="Editor"
+    tagName="textarea"
+    [config]="rteConfig"
+    [formControlName]="controlName"
+    [ngClass]="{ readonly: readonly }"
+    (ready)="onReady($event)"
+  ></ckeditor>
+</div>

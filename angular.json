@@ -145,6 +145,31 @@
           }
         }
       }
+    },
+    "ui-text-editor": {
+      "projectType": "library",
+      "root": "libs/ui/text-editor",
+      "sourceRoot": "libs/ui/text-editor/src",
+      "prefix": "uc",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui/text-editor/src/**/*.ts",
+              "libs/ui/text-editor/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui/text-editor"],
+          "options": {
+            "jestConfig": "libs/ui/text-editor/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
